@@ -3,6 +3,7 @@ package com.raven.springbootsecurityauthorizationcustomtable.model;
 import org.springframework.data.annotation.Id;
 import javax.persistence.*;
 
+@Entity
 public class CustomUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
