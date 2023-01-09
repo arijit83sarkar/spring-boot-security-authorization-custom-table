@@ -1,7 +1,5 @@
 package com.raven.springbootsecurityauthorizationcustomtable.service;
 
-import com.raven.springbootsecurityauthorizationcustomtable.model.CustomUser;
-import com.raven.springbootsecurityauthorizationcustomtable.repository.ICustomUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+/*@Service
 public class CustomUserService implements UserDetailsService {
     private final ICustomUserRepository customUserRepository;
 
@@ -40,4 +38,4 @@ public class CustomUserService implements UserDetailsService {
 
         return new User(_username, _password, _authorities);
     }
-}
+}*/
