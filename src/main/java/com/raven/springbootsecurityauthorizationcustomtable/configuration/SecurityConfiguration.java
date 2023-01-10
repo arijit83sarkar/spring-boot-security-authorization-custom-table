@@ -17,21 +17,22 @@ public class SecurityConfiguration {
             HttpSecurity httpSecurity) throws Exception {
 
         /* CUSTOM SECURITY */
-        httpSecurity.authorizeHttpRequests()
+        httpSecurity.csrf().disable()
+                .authorizeHttpRequests()
                 .antMatchers("/myCourses").authenticated()
-                .antMatchers("/welcome").permitAll()
+                .antMatchers("/welcome", "/registerStudent").permitAll()
                 .and().formLogin()
                 .and().httpBasic();
         return httpSecurity.build();
     }
 
-    @Bean
+    /*@Bean
     public JdbcUserDetailsManager userDetailsManager(DataSource dataSource) {
         return new JdbcUserDetailsManager(dataSource);
-    }
+    }*/
 
-    @Bean
+    /*@Bean
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
-    }
+    }*/
 }

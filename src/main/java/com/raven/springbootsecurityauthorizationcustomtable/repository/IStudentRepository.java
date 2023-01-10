@@ -1,9 +1,10 @@
 package com.raven.springbootsecurityauthorizationcustomtable.repository;
 
-import com.raven.springbootsecurityauthorizationcustomtable.model.Employee;
+import com.raven.springbootsecurityauthorizationcustomtable.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IEmployeeRepository extends JpaRepository<Employee, Long> {
+public interface IStudentRepository extends JpaRepository<Student, Long> {
+    Student findByEmail(String email);
 }
